@@ -21,8 +21,9 @@
 | Project | Description | Stack | License |
 | :--- | :--- | :--- | :--- |
 | [**NebulaSEO**](https://github.com/Vmnebula/NebulaSeo) | Autonomous Gemini 3 Pro Agent with 37 tools that audits Core Web Vitals, queries Search Console/GA4, and opens GitHub PRs with zero human intervention. | `Python` `FastAPI` `Next.js 14` `GCP` | **GPLv3** |
-| [**Substacker**](https://github.com/Vmnebula/substacker) | Multi-tenant FinOps LLM Cost Attribution & Observability platform for OpenAI, Anthropic, Gemini, and Azure. | `FastAPI` `Python SDK` `WebSockets` `Supabase` | **MIT** |
-| [**Sarkit (سارکٹ)**](https://sarkit.vmnebula.com) | WhatsApp-native Retail OS with Urdu/Pashto voice-to-ledger intent parsing on Vertex AI. | `Fastify` `Laravel` `Vertex AI` `MySQL` | **Commercial** |
+| [**Substacker**](https://github.com/Vmnebula/substacker) | Multi-tenant FinOps LLM Cost Attribution & Observability platform for OpenAI, Anthropic, Gemini, and Azure. | `Python` `FastAPI` `Python SDK` `WebSockets` `Supabase` | **MIT** |
+| [**Scope Shrinker**](https://github.com/Vmnebula/scope-shrinker-gemini-live) | Voice-native AI Technical Project Manager built on bidirectional Gemini Live WebSockets API. | `TypeScript` `Next.js` `Gemini Live` `Cloud Run` | **Open Source** |
+| [**FSLogix Interactive Setup**](https://github.com/Vmnebula/FxLogix-interactive-setup) | Automated enterprise PowerShell orchestration for Azure Virtual Desktop profile containers. | `PowerShell` `Azure AVD` `VDI` | **MIT** |
 
 ---
 
