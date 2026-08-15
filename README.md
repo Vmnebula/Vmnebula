@@ -35,4 +35,4 @@ Engineering:     Python (FastAPI), TypeScript, Next.js 14, Node.js (Fastify), PH
 Certifications:  Aviatrix Certified Network Engineer | DS4KP Data Science & Machine Learning
 ```
 
-📫 **Get in Touch:** [osamaaminemail@gmail.com](mailto:osamaaminemail@gmail.com) | [+92 310 5035067](tel:+923105035067)
+📫 **Get in Touch:** [osamaaminemail@gmail.com](mailto:osamaaminemail@gmail.com)
