@@ -14,14 +14,14 @@
 ┌─────────────────────────┐     ┌─────────────────────────┐     ┌─────────────────────────┐
 │   APPLIED AI ENGINES    │     │   MULTI-CLOUD INFRA     │     │     FINOPS & TELEMETRY  │
 │ • 37-Tool Gemini Agents │ ──> │ • 150+ Azure/AWS/GCP    │ ──> │ • 87% Runtime Cost Cut  │
-│ • Urdu/Pashto Voice-RAG │     │ • Multi-tenant GCE/Run  │     │ • Multi-LLM Attribution │
+│ • Urdu Voice-RAG │     │ • Multi-tenant GCE/Run  │     │ • Multi-LLM Attribution │
 │ • Bidirectional WebRTC  │     │ • Zero-Trust & AVD/RDS  │     │ • BigQuery / SQLite SDK │
 └─────────────────────────┘     └─────────────────────────┘     └─────────────────────────┘
 ```
 
 * **6 Years in Production:** Designed, secured, and scaled enterprise cloud platforms across the Gulf (KSA/UAE), UK, US, and Africa.
 * **FinOps & Platform Re-platforming:** Cut production runtime COGS by **~87%** (migrated ECS Fargate → containerized GCE, DynamoDB → Supabase, ECR → Artifact Registry).
-* **Accelerator & Community Alumnus:** Misk Accelerator (Saudi Arabia), Orbit Accelerator Alumnus; work featured on **National TV** and **BBC Pashto**.
+* **Accelerator & Community Alumnus:** Misk Accelerator (Saudi Arabia), Orbit Accelerator Alumnus; work featured on **National TV** and **International Media**.
 
 ---
 
