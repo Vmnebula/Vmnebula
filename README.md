@@ -1,8 +1,8 @@
-# Muhammad Osama Amin
+# Muhammad Usamah Amin
 **AI Solutions Architect · Platform Engineering · Applied AI Systems**
 
 ```
-Hi, I'm Osama 👋
+Hi, I'm usamah 👋
 I architect sovereign cloud infrastructure, multi-tenant agent runtimes, 
 and cost/carbon-metered execution platforms that ship to production.
 ```
