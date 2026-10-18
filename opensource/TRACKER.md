@@ -43,6 +43,10 @@ Prices would come from the Azure OpenAI pricing page per model, with the link in
 Two questions before I start. Is `deployment_type` a good key name? Azure's docs call these "deployment types" (Global, Data Zone, Standard). And would you rather I start with the current GPT models and add older ones in a follow-up?
 ```
 
+## Expensify proposals to post
+
+None yet. Checked 2026-10-18: the 15 newest Help Wanted issues were all decided, backend-only, native or styling, or already had proposals naming the same root cause (#104027, #101684, #98364 were the closest).
+
 ## Merged or closed
 
 None yet.

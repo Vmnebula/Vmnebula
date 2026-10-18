@@ -11,6 +11,7 @@ Researched 2026-10-18. Items marked *unverified* come from search snippets, not 
 - Proposals are judged on who is earliest with the best fix, and an AI bot posts the first one. New contributors get one job at a time.
 - Payment comes at least 7 days after deploy. Each regression costs 50% of the payout.
 - Stack: TypeScript and React Native.
+- Speed decides it. On 2026-10-18, every one of the 15 open issues already had a reviewer's pick or 4 to 7 detailed proposals within 1 to 4 days of the label. The routine now checks for issues labelled in the last 12 hours on every run.
 
 **Contract platforms that value open-source work:**
 - [Turing](https://www.turing.com): LLM coding and evaluation contracts. Listings name Pakistan as eligible. *unverified*

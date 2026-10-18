@@ -74,6 +74,25 @@ A run can push a branch only to a fork that exists and is covered by the Claude 
 7. **When nothing qualifies,** log "no qualifying issue" and stop. That is a normal outcome.
 8. **Save state.** Commit `TRACKER.md` and any patch to this branch, then push.
 
+## Expensify bounties (paid, $175 to $250 each)
+
+Muhammad has a verified Upwork account, so he can take these. Each run, after the steps above:
+
+1. Read the [Help Wanted + External list](https://github.com/Expensify/App/issues?q=is%3Aissue+is%3Aopen+label%3A%22Help+Wanted%22+label%3AExternal+sort%3Acreated-desc). Only consider issues where:
+   - "Help Wanted" was added in the last 12 hours or so
+   - no Contributor+ reviewer has picked a proposal (look for "🎀👀🎀" or "proposal looks good")
+   - it isn't labelled "Needs Reproduction"
+   - the fix is TypeScript logic in the app, not backend, native-only or pure styling
+2. Read every existing proposal. Write one only if you can show, on current main, a root cause or fix that none of them names. Expensify rejects proposals that repeat an earlier one.
+3. Use the official proposal template, with file:line references on main. Put it under "Expensify proposals to post" in `TRACKER.md` with:
+   - the issue link
+   - the bounty
+   - how many proposals existed when you wrote it
+   - a "Before posting" checklist: reproduce on a test account, confirm no proposal was accepted in the meantime, confirm main still matches
+4. Never post on Expensify. New contributors may hold only one Expensify job at a time, so skip this section while `TRACKER.md` shows one in progress.
+
+Most runs will find nothing. On 2026-10-18, all 15 open issues were already decided or had 4 to 7 detailed proposals.
+
 ## Never
 
 - Take an issue someone else has claimed, or duplicate an open PR.
