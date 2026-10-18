@@ -1,0 +1,57 @@
+From 134f387a066207027f5d02d4e3587ea19f977bf6 Mon Sep 17 00:00:00 2001
+From: Muhammad Osama Amin <muhammad.osama@vmnebula.com>
+Date: Sun, 18 Oct 2026 15:58:18 +0000
+Subject: [PATCH] fix(cost): skip tiered pricing tiers with a malformed range
+ instead of raising
+
+select_tier_for_input already ignores a tier whose range is not a two item
+list, but it sorted the tiers before filtering them, so a tier with
+"range": [] or "range": null raised while building the sort key. The proxy
+budget reservation calls this before a request is sent, so one bad tier in a
+deployment's tiered_pricing made the cost estimate raise instead of pricing
+the request from the valid tiers
+---
+ .../llm_cost_calc/tiered_pricing.py                 |  6 ++++--
+ .../llm_cost_calc/test_tiered_pricing.py            | 13 +++++++++++++
+ 2 files changed, 17 insertions(+), 2 deletions(-)
+ create mode 100644 tests/unit/litellm_core_utils/llm_cost_calc/test_tiered_pricing.py
+
+diff --git a/litellm/litellm_core_utils/llm_cost_calc/tiered_pricing.py b/litellm/litellm_core_utils/llm_cost_calc/tiered_pricing.py
+index 9bcc2b1..d5ba8be 100644
+--- a/litellm/litellm_core_utils/llm_cost_calc/tiered_pricing.py
++++ b/litellm/litellm_core_utils/llm_cost_calc/tiered_pricing.py
+@@ -44,8 +44,10 @@ def select_tier_for_input(
+     if not tiered_pricing or input_tokens <= 0:
+         return None
+ 
+-    sorted_tiers: Final = sorted(tiered_pricing, key=lambda t: t.get("range", [0, 0])[0])
+-    valid_tiers: Final = [tier for tier in sorted_tiers if len(tier.get("range", [])) == 2]
++    valid_tiers: Final = sorted(
++        (tier for tier in tiered_pricing if isinstance(tier.get("range"), (list, tuple)) and len(tier["range"]) == 2),
++        key=lambda tier: tier["range"][0],
++    )
+     if not valid_tiers:
+         return None
+ 
+diff --git a/tests/unit/litellm_core_utils/llm_cost_calc/test_tiered_pricing.py b/tests/unit/litellm_core_utils/llm_cost_calc/test_tiered_pricing.py
+new file mode 100644
+index 0000000..347aaef
+--- /dev/null
++++ b/tests/unit/litellm_core_utils/llm_cost_calc/test_tiered_pricing.py
+@@ -0,0 +1,13 @@
++import pytest
++
++from litellm.litellm_core_utils.llm_cost_calc.tiered_pricing import select_tier_for_input
++
++
++@pytest.mark.parametrize(
++    "malformed_tier",
++    [{"range": []}, {"range": None}, {"range": [32_000]}, {"input_cost_per_token": 1e-6}],
++)
++def test_select_tier_for_input_skips_tier_with_malformed_range(malformed_tier):
++    priced_tier = {"range": [0, 32_000], "input_cost_per_token": 1e-6}
++
++    assert select_tier_for_input([malformed_tier, priced_tier], input_tokens=100) is priced_tier
+-- 
+2.43.0
+
