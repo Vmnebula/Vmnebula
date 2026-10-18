@@ -12,14 +12,35 @@ Quality counts more than volume. A PR that gets closed as low-effort or duplicat
 
 ## Target projects
 
-| Upstream | Fork | Why it fits |
-|---|---|---|
-| BerriAI/litellm | Vmnebula/litellm | LLM gateway; its spend and cost tracking overlaps with Substacker |
-| langfuse/langfuse-python | not forked yet | LLM observability SDK |
-| traceloop/openllmetry | not forked yet | OpenTelemetry instrumentation for LLM apps |
-| Arize-ai/phoenix | not forked yet | LLM tracing and evals |
+Ranked by how likely an outside PR is to merge (checked 2026-10-18; see `OPPORTUNITIES.md`).
 
-A run can push a branch only to a fork where the Claude GitHub App is installed. Otherwise, it saves the change as `opensource/patches/<project>-<slug>.patch` on this branch and records that in the tracker.
+| Upstream | Fork | Why it fits | House rules |
+|---|---|---|---|
+| openlit/openlit | not forked yet | LLM token and cost telemetry (Python and TS). Merges outside PRs the same day. | No CLA. Discuss big changes first. Many issues are filed by people who send the PR themselves within a day, so check open PRs before starting. |
+| pydantic/genai-prices | not forked yet | LLM price database, the closest match to Substacker. Pydantic is hiring. | Ask first: post the approach on the issue and wait for a maintainer; a triage bot blocks new-provider PRs until one decides. |
+| open-telemetry/opentelemetry-python-genai | not forked yet | OTel GenAI token-usage instrumentation. CNCF, so it helps an LFX mentorship application. | Muhammad must sign the OTel CLA. Read its AGENTS.md. Some issues need confirmation before work starts. |
+| BerriAI/litellm | Vmnebula/litellm | LLM gateway with spend tracking. Very crowded, so only self-found bugs. | No `/` in branch names, no Claude attribution, live-proxy proof in the PR body. |
+| PrefectHQ/prefect | not forked yet | Orchestration with Azure and AWS integrations. | Ask first: every bug fix needs an issue confirmed by a maintainer. May close low-effort AI PRs. |
+
+Don't prepare PRs for projects whose rules refuse or restrict agent-made PRs. getsentry/sentry-python says it won't review them, so Muhammad should only work there by hand.
+
+Skip these as too crowded or not merging outside work:
+- langfuse-python
+- openllmetry
+- pydantic-ai
+- dspy
+- mem0
+- llama_index
+- Arize Phoenix
+- Helicone
+- Litestar
+- Opik
+- Agenta
+- the Azure SDK and CLI repos
+
+A run can push a branch only to a fork that exists and is covered by the Claude GitHub App. Runs can't create forks. Without a fork, save the change as `opensource/patches/<project>-<slug>.patch` on this branch, record that in the tracker, and ask Muhammad in the summary to fork the project.
+
+**Ask-first projects.** Write the approach comment under "Comments to post" in `TRACKER.md` for Muhammad to post. A later run reads the issue page. Only once a maintainer has agreed does it implement the fix.
 
 ## Each run, in order
 

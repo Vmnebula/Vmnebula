@@ -17,6 +17,32 @@ These branches are pushed and need Muhammad to open the PR from the compare link
 |---|---|---|---|---|
 | 2026-10-18 | BerriAI/litellm | `fix-tiered-pricing-malformed-range` | A pricing tier with `"range": []` or `null` crashes the proxy's pre-request budget estimate instead of being skipped. Self-found, no upstream issue. | Pushed to `Vmnebula/litellm`. [Open PR](https://github.com/BerriAI/litellm/compare/main...Vmnebula:litellm:fix-tiered-pricing-malformed-range). PR text: `patches/litellm-tiered-pricing-malformed-range.PR.md`. Needs the live-proxy proof run before opening. |
 
+## Comments to post
+
+These are approach comments for ask-first projects. Muhammad posts them; a later run checks the issue for a maintainer reply before implementing.
+
+### pydantic/genai-prices#332 (Azure Data Zone and Regional pricing)
+
+Post at https://github.com/pydantic/genai-prices/issues/332. Status: **not posted yet**.
+
+```markdown
+Hi, I'd like to pick this up if it's still wanted. @mathislucka, happy to step aside if you've started on it.
+
+My idea is to reuse `price_variants` rather than add anything new to the schema. Each Azure model whose Data Zone or Regional price differs from Global would get variants keyed on a new context key:
+
+    price_variants:
+      - when: { deployment_type: data_zone }
+        prices: { input_mtok: ..., cache_read_mtok: ..., output_mtok: ... }
+      - when: { deployment_type: regional }
+        prices: { ... }
+
+With no `price_context` the Global price still applies, so current callers see no change. Callers who deploy Data Zone or Regional opt in with `price_context={"deployment_type": "data_zone"}`. Azure's responses don't say which deployment type served the request, so the caller is the only reliable source for it.
+
+Prices would come from the Azure OpenAI pricing page per model, with the link in `price_comments`, plus tests that the default and each variant resolve to the right price.
+
+Two questions before I start. Is `deployment_type` a good key name? Azure's docs call these "deployment types" (Global, Data Zone, Standard). And would you rather I start with the current GPT models and add older ones in a follow-up?
+```
+
 ## Merged or closed
 
 None yet.
@@ -37,6 +63,8 @@ None yet.
 | langfuse/langfuse-python#1834 | Reporter's PR #1833 open; assigned to a maintainer |
 | langfuse/langfuse-python#1971 | Reporter's PR #1972 open |
 | traceloop/openllmetry (all recent bugs) | 637 open PRs; every recent issue already has one |
+| openlit/openlit#1753 | PR #1757 opened the day after the issue |
+| BerriAI/litellm search tier pricing (Exa, Firecrawl) | Checked by running it, prices the right tier, no bug |
 
 ## Run log
 
