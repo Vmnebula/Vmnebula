@@ -15,7 +15,7 @@ These branches are pushed and need Muhammad to open the PR from the compare link
 
 | Prepared | Project | Branch | What it fixes | State |
 |---|---|---|---|---|
-| 2026-10-18 | BerriAI/litellm | `fix-tiered-pricing-malformed-range` | A pricing tier with `"range": []` or `null` crashes the proxy's pre-request budget estimate instead of being skipped. Self-found, no upstream issue. | Not pushed yet (no App access). Patch: `patches/litellm-tiered-pricing-malformed-range.patch`. PR text: `patches/litellm-tiered-pricing-malformed-range.PR.md`. Needs the live-proxy proof run before opening. |
+| 2026-10-18 | BerriAI/litellm | `fix-tiered-pricing-malformed-range` | A pricing tier with `"range": []` or `null` crashes the proxy's pre-request budget estimate instead of being skipped. Self-found, no upstream issue. | Pushed to `Vmnebula/litellm`. [Open PR](https://github.com/BerriAI/litellm/compare/main...Vmnebula:litellm:fix-tiered-pricing-malformed-range). PR text: `patches/litellm-tiered-pricing-malformed-range.PR.md`. Needs the live-proxy proof run before opening. |
 
 ## Merged or closed
 
