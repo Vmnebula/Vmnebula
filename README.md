@@ -1,4 +1,4 @@
-# Muhammad Osama Amin
+# Muhammad Osama A
 
 **AI systems and cloud infrastructure engineer**
 
