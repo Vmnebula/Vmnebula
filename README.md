@@ -1,27 +1,42 @@
-# Muhammad Osama A
+# VM Nebula
 
-**AI systems and cloud infrastructure engineer**
+**Managed AI Agent Cloud, Voice AI Systems & Open-Source Infrastructure**
 
-I build practical AI applications and the cloud systems that run them. My work covers model usage tracking, voice agents, private LLM deployments, Azure Virtual Desktop, and secure application hosting.
+Building production cloud runtimes, voice-first enterprise software, and upstream open-source patches across Python async networking, distributed queues, and AI agent frameworks.
 
-## Public projects
+---
 
-### [Substacker](https://github.com/Vmnebula/substacker) · AI cost intelligence
+## Flagship Platforms
 
-An open-source FastAPI application that attributes LLM usage and cost by team, project, and model. It accepts provider usage CSVs and live traffic from its Python SDK, then reports waste patterns and spend anomalies. The repository includes setup instructions, tests, and CI. [View the live application](https://substacker.vmnebula.com/).
+- **[VM Nebula](https://vmnebula.com)** — Managed cloud platform for deploying isolated, always-on AI agents and private AI workflows with deterministic spend guardrails and per-minute metering.
+- **[Sarkit](https://sarkit.pk)** — National award-winning Voice AI Point-of-Sale and retail operating system built for high-SKU wholesale and retail merchants.
+- **[Substacker](https://github.com/Vmnebula/substacker)** — Open-source AI cost intelligence and token-attribution engine for engineering teams.
 
-### [Scope Shrinker](https://github.com/Vmnebula/scope-shrinker-gemini-live) · voice agent prototype
+---
 
-An archived hackathon prototype using Gemini Live to turn a spoken product discussion into a structured technical scope. The code is public for review; it is not presented as a maintained product.
+## Upstream Open-Source Contributions
 
-## Client work
+Active contributor to core Python networking, storage, distributed job queues, and AI agent infrastructure:
 
-My [Fiverr portfolio](https://www.fiverr.com/users/osamaaminkhan/portfolio) includes Azure Virtual Desktop and private LLM infrastructure examples. I keep client code and data private.
+| Project | Domain | Contribution Focus |
+| :--- | :--- | :--- |
+| **[redis/redis-py](https://github.com/redis/redis-py)** | Distributed Cache & Data Store | Async cluster connection lifecycle and lazy transaction safety |
+| **[fsspec/filesystem_spec](https://github.com/fsspec/filesystem_spec)** | Python Filesystem Interface | Async filesystem wrapper delegation and write-stream integrity *(Merged)* |
+| **[ronf/asyncssh](https://github.com/ronf/asyncssh)** | Asynchronous SSHv2 Protocol | Eager task factory authentication handling and logging fast-paths *(Merged)* |
+| **[agno-agi/agno](https://github.com/agno-agi/agno)** | Multi-Agent Framework | Speech/TTS runtime provider migration and agent tool reliability *(Merged)* |
+| **[agronholm/anyio](https://github.com/agronholm/anyio)** | Structured Concurrency & I/O | Socket listener resilience under descriptor exhaustion and UDP close handling |
+| **[nats-io/nats.py](https://github.com/nats-io/nats.py)** | Cloud-Native Messaging | Ordered consumer reset policies, request teardown, and unsubscribe wakeups |
+| **[rq/rq](https://github.com/rq/rq)** & **[agronholm/apscheduler](https://github.com/agronholm/apscheduler)** | Job Queues & Scheduling | Empty-batch group enqueue safety and trigger jitter time preservation |
+| **[Immortal-Protocols/lastbook](https://github.com/Immortal-Protocols/lastbook)** | Offline Knowledge AI & Maps | Regional offline geospatial specifications and search coverage |
 
-## Tools I use
+---
 
-**AI:** Python, FastAPI, OpenAI and Gemini APIs, RAG, vector search, model monitoring  
-**Cloud:** Azure Virtual Desktop, FSLogix, Entra ID, AWS, Google Cloud, Docker, Linux  
-**Applications:** TypeScript, Node.js, PostgreSQL, WebSockets, GitHub Actions
+## Core Engineering Stack
 
-[Fiverr](https://www.fiverr.com/osamaaminkhan) · [LinkedIn](https://www.linkedin.com/in/muhammad-osama-amin/)
+- **Systems & Runtimes:** Python, TypeScript, Node.js, FastAPI, AsyncIO / Trio, Linux, Docker, Kubernetes
+- **Cloud & Infrastructure:** Google Cloud, Microsoft Azure, AWS, Container Orchestration, Zero-Trust Networking
+- **Applied AI:** Autonomous Agent Runtimes, Voice AI Pipelines, Optical Document Extraction, Retrieval Systems
+
+---
+
+[vmnebula.com](https://vmnebula.com) · [sarkit.pk](https://sarkit.pk)
